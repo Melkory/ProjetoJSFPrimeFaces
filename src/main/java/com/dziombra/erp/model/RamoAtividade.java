@@ -2,6 +2,7 @@ package com.dziombra.erp.model;
 
 import java.io.Serializable;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -9,7 +10,7 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "tb_ramoAtividade")
+@Table(name = "tb_ramo_atividade")
 public class RamoAtividade implements Serializable {
 
 	private static final long serialVersionUID = 1L;
@@ -18,6 +19,7 @@ public class RamoAtividade implements Serializable {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 	
+	@Column(nullable = false, length = 80)
 	private String descricao;
 	
 	
